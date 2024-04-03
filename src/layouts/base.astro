@@ -1,0 +1,40 @@
+---
+import "@styles/global.css"
+const { title } = Astro.props
+---
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="/#" class="font-bold text-lg">juw.ee</a>
+        <slot />
+        <footer>
+            <p class="my-12">. -. -..</p>
+
+            <ul>
+                <li><a href="mailto:mail@juw.ee?subject=hello!">mail@juw.ee</a></li>
+                <li><a href="https://github.com/juweeism">github</a></li>
+                <li><a href="https://twitter.com/juweeism">twitter</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+<style>
+    li {
+        text-decoration: underline;
+    }
+
+    li:hover {
+        font-weight: bold;
+    }
+</style>
