@@ -1,0 +1,163 @@
+---
+import Base from "@layouts/base.astro"
+
+const title = "library"
+
+const books = [
+{
+title: 'the vegetarian',
+author: 'han kang',
+type: 'read',
+},
+{
+title: 'normal people',
+author: 'sally rooney',
+type: 'read',
+},
+{
+title: 'when kale and coffee compete',
+author: 'alan klement',
+type: 'read',
+},
+{
+title: 'how big things get done',
+author: 'bent flyvbjerg, dan gardner',
+type: 'read',
+},
+{
+title: 'the courage to be disliked',
+author: 'ichiro kishimi, fumitake koga',
+type: 'read',
+},
+{
+title: 'the creative act',
+author: 'rick rubin',
+type: 'read',
+},
+{
+title: 'i who have never known men',
+author: 'jacqueline harpman',
+type: 'read',
+},
+{
+title: 'you look like a thing and i love you',
+author: 'janelle shane',
+type: 'read',
+},
+{
+title: "a monk's guide to a clean house and mind",
+author: 'shoukei matsumoto',
+type: 'read',
+},
+{
+title: 'hell yeah or no',
+author: 'derek sivers',
+type: 'read',
+},
+{
+title: 'do the work',
+author: 'steven pressfield',
+type: 'read',
+},
+{
+title: 'the war of art',
+author: 'steven pressfield',
+type: 'read',
+},
+{
+title: 'how to take smart notes',
+author: 'sönke ahrens',
+type: 'read',
+},
+{
+title: 'the four agreements',
+author: 'don miguel ruiz',
+type: 'read',
+},
+{
+title: 'i want to die but i want to eat tteokbokki',
+author: 'baek se-hee',
+type: 'read',
+},
+
+{
+title: 'the visual display of quantitative information',
+author: 'edward tufte',
+type: 'to read',
+},
+{
+title: 'the coming wave',
+author: 'mustafa suleyman',
+type: 'to read',
+},
+{
+title: 'the design of everyday things',
+author: 'dan norman',
+type: 'to read',
+},
+{
+title: 'convinience store woman',
+author: 'sayaka murata',
+type: 'to read',
+},
+{
+title: 'the hole',
+author: 'hiroko oyamada',
+type: 'to read',
+},
+{
+title: 'in the miso soup',
+author: 'ryū murakami',
+type: 'to read',
+},
+{
+title: 'the ten loves of nishino',
+author: 'hiromi kawakami',
+type: 'to read',
+},
+{
+title: 'greek lessons',
+author: 'han kang',
+type: 'to read',
+},
+{
+title: 'project hail mary',
+author: 'andy weir',
+type: 'to read',
+},
+{
+title: 'saha',
+author: 'cho nam-joo',
+type: 'to read',
+},
+{
+title: 'the discomfort of evening',
+author: 'marieke lucas rijneveld',
+type: 'to read',
+},
+{
+title: 'hit parade of tears',
+author: 'izumi suzuki',
+type: 'to read',
+},
+]
+---
+
+<Base title={title}>
+<h1 class="text-3xl font-bold my-9 font-serif">{title}</h1>
+<ul class="my-6">
+    {
+    books.map(b => (
+    b.type === 'read' && <li><b>{b.title} </b>/ {b.author}</li>
+    ))
+    }
+</ul>
+<h1 class="text-3xl font-bold my-9 font-serif">anti-library</h1>
+<ul>
+    {
+    books.map(b => (
+    b.type === 'to read' && <li><b>{b.title} </b>/ {b.author}</li>
+    ))
+    }
+</ul>
+</Base>
