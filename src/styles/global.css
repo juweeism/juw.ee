@@ -16,3 +16,18 @@ pre {
     width: 100%;
     white-space: pre;
 }
+
+blockquote {
+    border-left: 1px solid gray;
+    margin: 1rem;
+    padding-left: 1rem;
+    font-family: serif;
+}
+
+blockquote p {
+    margin: 1rem 0;
+}
+
+hr {
+    margin: 3rem 0;
+}
