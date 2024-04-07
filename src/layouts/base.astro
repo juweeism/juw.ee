@@ -16,7 +16,10 @@ const { title } = Astro.props
         <nav class="flex justify-between items-center w-full cursor-pointer select-none">
 
             <a href="/" class="font-bold text-lg">juw.ee</a>
-            <div id="switch" class="text-3xl">○</div>
+            <div class="flex gap-9 items-center">
+                <a href="/now" class="text-lg hover:font-bold">now</a>
+                <div id="switch" class="text-3xl">○</div>
+            </div>
         </nav>
         <slot />
         <footer>
