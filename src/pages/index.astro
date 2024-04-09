@@ -11,15 +11,27 @@ import Dragonfly from "@components/dragonfly.astro"
 
     <ul class="flex flex-col">
         <h1 class="border-t border-b my-3 p-1 text-sm border-zinc-300 dark:border-slate-700">INDEX</h1>
-        <a href="/links">
-            <li>[001] links</li>
-        </a>
-        <a href="/library">
-            <li>[002] library</li>
-        </a>
-        <a href="https://forest.juw.ee">
-            <li>[003] forest</li>
-        </a>
+        <div class="grid grid-cols-3">
+            <div>
+                <a href="/links">
+                    <li>[001] links</li>
+                </a>
+                <a href="/library">
+                    <li>[002] library</li>
+                </a>
+                <a href="https://forest.juw.ee">
+                    <li>[003] forest</li>
+                </a>
+            </div>
+            <div>
+                <a href="/uses">
+                    <li>[004] uses</li>
+                </a>
+                <a href="/">
+                    <li>[005] ???</li>
+                </a>
+            </div>
+        </div>
     </ul>
 
     <ul>
