@@ -3,11 +3,119 @@ import Base from "@layouts/base.astro"
 
 const title = "links"
 
+const links = [
+{
+title: "Gwern Branwen",
+href: "gwern.net",
+},
+{
+title: "Buster's notes",
+href: "busterbenson.com",
+},
+{
+title: "Jacky Zhao's hypertext garden",
+href: "jzhao.xyz",
+},
+{
+title: "kepano",
+href: "stephango.com",
+},
+{
+title: "Andrej Karpathy",
+href: "karpathy.ai",
+},
+{
+title: "qtnx.ai",
+href: "qtnx.ai",
+},
+{
+title: "echo4eva",
+href: "echo4eva.com",
+},
+{
+title: "snats",
+href: "snats.xyz",
+},
+{
+title: "Arne Bahlo",
+href: "arne.me",
+},
+{
+title: "kezie",
+href: "kez.ie",
+},
+{
+title: "kache",
+href: "yacine.ca",
+},
+{
+title: "Derek Sivers",
+href: "sive.rs",
+},
+{
+title: "Julia Evans",
+href: "jvns.ca",
+},
+{
+title: "Chia's blog",
+href: "chias.blog",
+},
+{
+title: "Theia Vogel",
+href: "vgel.me",
+},
+{
+title: "nerdy pepper's musings",
+href: "peppe.rs",
+},
+{
+title: "Spencer Chang",
+href: "www.spencerchang.me",
+},
+{
+title: "shen",
+href: "shen.land",
+},
+]
+
+const newsletters = [
+{
+title: "astral codex ten",
+href: "www.astralcodexten.com"
+},
+{
+title: "the map is mostly water",
+href: "map.simonsarris.com"
+},
+]
+
 ---
 
 <Base title={title}>
-<h1 class="text-3xl font-bold my-9 font-serif">{title}</h1>
+<div class="flex items-start gap-9 mt-9">
+    <h1 class="text-3xl font-bold font-serif">links</h1>
+    <p class="text-xs my-3">this is a list of digital gardens, web blogs, and various personal sites i adore and take
+        inspirations from. i love to discover personal web pages, i take suggestions via twitter.</p>
+</div>
 <ul class="my-6">
-    soon :)
+    {
+    links.map(l => (
+    <li><a href={"https://" + l.href} target="_blank" rel="noopener noreferrer">{l.title} /
+            <span class="underline">{l.href}</span></a></li>
+    ))
+    }
+</ul>
+<div class="flex items-start gap-9 mt-9">
+    <h1 class="text-3xl font-bold font-serif">newsletters</h1>
+    <p class="text-xs my-3">this is a list of newsletters i am subscribed to.
+</div>
+</p>
+<ul class="my-6">
+    {
+    newsletters.map(l => (
+    <li><a href={"https://" + l.href} target="_blank" rel="noopener noreferrer">{l.title} /
+            <span class="underline">{l.href}</span></a></li>
+    ))
+    }
 </ul>
 </Base>
