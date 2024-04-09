@@ -1,6 +1,9 @@
 ---
 import Base from "@layouts/base.astro"
 import Dragonfly from "@components/dragonfly.astro"
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog')
 ---
 
 <Base>
@@ -34,13 +37,21 @@ import Dragonfly from "@components/dragonfly.astro"
         </div>
     </ul>
 
-    <ul>
+    <ol class="list-circle">
         <h1 class="border-t border-b my-3 p-1 text-sm border-zinc-300 dark:border-slate-700">LATEST POSTS</h1>
-        <li class="flex max-w-full justify-between">
-            <span>i. girlblog</span>
-            <span>20240404</span>
-        </li>
-    </ul>
+        {
+        posts.map(p => (
+        <a href={"blog/" + p.slug}>
+            <li class="grid grid-cols-[1fr_2fr_1fr] cursor-pointer gap-5">
+                <img src={p.data.img} alt="ethel cain with moomin"
+                    class="object-cover aspect-video grayscale contrast-50 dark:brightness-50 dark:contrast-125 dark:saturate-50 dark:hue-rotate-0">
+                <p class="font-bold">{p.data.title}</p>
+                <p class="text-end">{p.data.date}</p>
+            </li>
+        </a>
+        ))
+        }
+    </ol>
 </div>
 </Base>
 

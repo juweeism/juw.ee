@@ -21,7 +21,8 @@ blockquote {
     border-left: 1px solid gray;
     margin: 1rem;
     padding-left: 1rem;
-    font-family: serif;
+    font-family: sans-serif;
+    font-size: 0.9rem;
 }
 
 blockquote p {
