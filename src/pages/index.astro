@@ -8,12 +8,12 @@ const posts = await getCollection('blog')
 
 <Base>
 <div class="flex flex-col gap-9 my-9">
-    <div class="dragonfly dark:text-slate-500 text-zinc-500">
+    <div class="dragonfly dark:text-zinc-500 text-zinc-600">
         <Dragonfly />
     </div>
 
     <ul class="flex flex-col">
-        <h1 class="border-t border-b my-3 p-1 text-sm border-zinc-300 dark:border-slate-700">INDEX</h1>
+        <h1 class="border-t border-b my-3 p-1 text-sm border-zinc-300 dark:border-zinc-700">INDEX</h1>
         <div class="grid grid-cols-2 lg:grid-cols-3">
             <div>
                 <a href="/links">
@@ -38,14 +38,12 @@ const posts = await getCollection('blog')
     </ul>
 
     <ol class="list-circle">
-        <h1 class="border-t border-b my-3 p-1 text-sm border-zinc-300 dark:border-slate-700">LATEST POSTS</h1>
+        <h1 class="border-t border-b my-3 p-1 text-sm border-zinc-300 dark:border-zinc-700">LATEST POSTS</h1>
         {
         posts.map(p => (
         <a href={"blog/" + p.slug}>
-            <li class="grid grid-cols-[1fr_2fr_1fr] cursor-pointer gap-5">
-                <img src={p.data.img} alt="ethel cain with moomin"
-                    class="object-cover aspect-video grayscale contrast-50 dark:brightness-50 dark:contrast-125 dark:saturate-50 dark:hue-rotate-0">
-                <p class="font-bold">{p.data.title}</p>
+            <li class="grid grid-cols-2 cursor-pointer gap-5">
+                <p class="hover:font-bold">{p.data.title}</p>
                 <p class="text-end">{p.data.date}</p>
             </li>
         </a>
