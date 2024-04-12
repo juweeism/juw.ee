@@ -7,7 +7,7 @@ const Spinner = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prevIndex) => (prevIndex + 1) % dots.length);
-        }, 150); // Change the interval duration as needed
+        }, 99); // Change the interval duration as needed
 
         return () => clearInterval(interval);
     }, []);
