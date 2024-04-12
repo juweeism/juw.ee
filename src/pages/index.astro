@@ -1,6 +1,7 @@
 ---
 import Base from "@layouts/base.astro"
 import Dragonfly from "@components/dragonfly.astro"
+import Spinner from "@components/spinner.tsx"
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog')
@@ -10,6 +11,24 @@ const posts = await getCollection('blog')
 <div class="flex flex-col gap-9 my-9">
     <div class="dragonfly dark:text-zinc-500 text-zinc-600">
         <Dragonfly />
+    </div>
+
+    <div>
+        <Spinner client:load />
+        <ul class="grid grid-cols-2 gap-3 mt-3">
+            <li class="border border-zinc-700 p-3">
+                <a href="/">
+                    <div class="text-lg">rkive</div>
+                    <p class="mt-3 text-sm">what is this??? soon :)</p>
+                </a>
+            </li>
+            <li class="border border-zinc-700 p-3">
+                <a href="https://forest.juw.ee">
+                    <div class="text-lg">forest</div>
+                    <p class="mt-3 text-xs">aka a guilt-free place where i publish my notes</p>
+                </a>
+            </li>
+        </ul>
     </div>
 
     <ul class="flex flex-col">
@@ -22,16 +41,8 @@ const posts = await getCollection('blog')
                 <a href="/library">
                     <li>[002] library</li>
                 </a>
-                <a href="https://forest.juw.ee">
-                    <li>[003] forest</li>
-                </a>
-            </div>
-            <div>
                 <a href="/uses">
-                    <li>[004] uses</li>
-                </a>
-                <a href="/">
-                    <li>[005] ???</li>
+                    <li>[003] uses</li>
                 </a>
             </div>
         </div>
