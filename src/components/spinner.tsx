@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const Spinner = () => {
     const [index, setIndex] = useState<number>(0);
-    const dots: string[] = ['⠾', '⠽', '⠻', '⠯', '⠷',];
+    const dots: string[] = ['⠾', '⠽', '⠻', '⠟', '⠯', '⠷',];
 
     useEffect(() => {
         const interval = setInterval(() => {
