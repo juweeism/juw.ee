@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "/home/minx/work/juw.ee",
+    "baseUrl": "./",
     "paths": {
       "@components/*": [
         "src/components/*"
@@ -20,3 +20,4 @@
     "jsxImportSource": "react"
   }
 }
+
