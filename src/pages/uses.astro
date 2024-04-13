@@ -1,10 +1,12 @@
 ---
-import Base from "@layouts/base.astro"
+import Directory from "@layouts/directory.astro"
+
+const title = "uses"
 ---
 
-<Base>
-<h1 class="text-3xl font-bold font-serif my-9">uses</h1>
-<p>
-    where i share the tools that make up my daily driving machine. (soon)
-</p>
-</Base>
+<Directory title={title}>
+    <h1 class="text-3xl font-bold font-serif my-9">uses</h1>
+    <p>
+        where i share the tools that make up my daily driving machine. (soon)
+    </p>
+</Directory>

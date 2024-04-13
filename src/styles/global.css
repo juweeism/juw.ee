@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'TT2020';
+    src: url('/fonts/TT2020Base-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT2020';
+    src: url('/fonts/TT2020Base-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT2020G';
+    src: url('/fonts/TT2020StyleG-Regular-ASCII.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT2020';
+    src: url('/fonts/TT2020StyleE-Regular.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 html,
 body {
     margin: 0;
@@ -21,14 +53,9 @@ blockquote {
     border-left: 1px solid gray;
     margin: 1rem;
     padding-left: 1rem;
-    font-family: sans-serif;
-    font-size: 0.9rem;
+    font-style: italic;
 }
 
 blockquote p {
     margin: 1rem 0;
-}
-
-hr {
-    margin: 3rem 0;
 }

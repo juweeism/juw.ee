@@ -1,5 +1,5 @@
 ---
-import Base from "@layouts/base.astro"
+import Directory from "@layouts/directory.astro"
 
 const title = "library"
 
@@ -143,21 +143,21 @@ type: 'to read',
 ]
 ---
 
-<Base title={title}>
-<h1 class="text-3xl font-bold my-9 font-serif">{title}</h1>
-<ul class="my-6">
-    {
-    books.map(b => (
-    b.type === 'read' && <li><b>{b.title} </b>/ {b.author}</li>
-    ))
-    }
-</ul>
-<h1 class="text-3xl font-bold my-9 font-serif">anti-library</h1>
-<ul>
-    {
-    books.map(b => (
-    b.type === 'to read' && <li><b>{b.title} </b>/ {b.author}</li>
-    ))
-    }
-</ul>
-</Base>
+<Directory title={title}>
+    <h1 class="text-3xl font-bold my-9 font-serif">{title}</h1>
+    <ul class="my-6">
+        {
+        books.map(b => (
+        b.type === 'read' && <li><b>{b.title} </b>/ {b.author}</li>
+        ))
+        }
+    </ul>
+    <h1 class="text-3xl font-bold my-9 font-serif">anti-library</h1>
+    <ul>
+        {
+        books.map(b => (
+        b.type === 'to read' && <li><b>{b.title} </b>/ {b.author}</li>
+        ))
+        }
+    </ul>
+</Directory>

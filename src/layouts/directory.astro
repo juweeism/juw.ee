@@ -1,0 +1,12 @@
+---
+import Base from "@layouts/base.astro"
+import Prose from '@components/prose.astro';
+
+const { title } = Astro.props;
+---
+
+<Base title={title}>
+<Prose>
+    <slot />
+</Prose>
+</Base>

@@ -1,10 +1,14 @@
 ---
 import Base from "@layouts/base.astro"
+import Prose from "@components/prose.astro"
 import Dragonfly from "@components/dragonfly.astro"
 import Spinner from "@components/spinner.tsx"
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog')
+const now = await getCollection('now')
+const recent = now!!.pop()
+const { Content, headings } = await recent!!.render();
 ---
 
 <Base>
@@ -61,6 +65,16 @@ const posts = await getCollection('blog')
         ))
         }
     </ol>
+
+    <div class="my-9 font-['TT2020'] text-sm md:flex gap-3 p-7 bg-zinc-50">
+        <p class="min-w-max">recently, </p>
+        <div>
+            {
+            <p>{recent!!.data.title} {recent!!.data.day}</p>
+            <Content />
+            }
+        </div>
+    </div>
 </div>
 </Base>
 

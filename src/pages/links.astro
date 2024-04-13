@@ -1,5 +1,5 @@
 ---
-import Base from "@layouts/base.astro"
+import Directory from "@layouts/directory.astro"
 
 const title = "links"
 
@@ -103,31 +103,36 @@ href: "map.simonsarris.com"
 
 ---
 
-<Base title={title}>
-<div class="flex items-start gap-9 mt-9">
-    <h1 class="text-3xl font-bold font-serif">links</h1>
-    <p class="text-xs my-3">this is a list of digital gardens, web blogs, and various personal sites i adore and/or draw
-        inspiration from. i love to discover personal web pages, i take suggestions via twitter.</p>
-</div>
-<ul class="my-6">
-    {
-    links.map(l => (
-    <li><a href={"https://" + l.href} target="_blank" rel="noopener noreferrer">{l.title} /
-            <span class="underline">{l.href}</span></a></li>
-    ))
-    }
-</ul>
-<div class="flex items-start gap-9 mt-9">
-    <h1 class="text-3xl font-bold font-serif">newsletters</h1>
-    <p class="text-xs my-3">this is a list of newsletters i am subscribed to.
-</div>
-</p>
-<ul class="my-6">
-    {
-    newsletters.map(l => (
-    <li><a href={"https://" + l.href} target="_blank" rel="noopener noreferrer">{l.title} /
-            <span class="underline">{l.href}</span></a></li>
-    ))
-    }
-</ul>
-</Base>
+<Directory title={title}>
+    <div class="mt-9">
+        <h1>{title}</h1>
+        <p class="my-3 ">this is a list of digital gardens, web blogs, and various personal sites i
+            adore and/or draw
+            inspiration from.</p>
+    </div>
+    <ul class="m-6 list-disc font-['TT2020']">
+        {
+        links.map(l => (
+        <li>
+            <b>{l.title}</b> /
+            <a href={"https://" + l.href} target="_blank" rel="noopener noreferrer">{l.href}</a>
+        </li>
+        ))
+        }
+    </ul>
+    <div class="mt-9">
+        <h1 class="text-5xl font-bold font-serif font-['TT2020']">newsletters</h1>
+        <p class="my-3">this is a list of newsletters i am subscribed to.
+    </div>
+    </p>
+    <ul class="m-6 list-disc font-['TT2020']">
+        {
+        newsletters.map(l => (
+        <li>
+            <b>{l.title}</b> /
+            <a href={"https://" + l.href} target="_blank" rel="noopener noreferrer">{l.href}</a>
+        </li>
+        ))
+        }
+    </ul>
+</Directory>
