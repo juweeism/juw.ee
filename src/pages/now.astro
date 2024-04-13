@@ -14,8 +14,8 @@ Content: n.Content
 ---
 
 <Base title={title}>
-<h1 class="text-7xl font-bold my-9 font-serif font-['TT2020'] italic">{title}</h1>
 <Prose>
+    <h1>{title}</h1>
     {
     nowPosts.map(({title, day, Content}) => (
     <div>
